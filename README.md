@@ -355,8 +355,9 @@ Device: /dev/sdc2 40
 
 ```
 cp tables.conf.sample tables.conf
+
+sudo python2 ./Behemoth.py /media/nm/backup01/A51/table
 ```
-sudo python2 ./Behemoth.py /media/nm/backup01/A51/table```
 
 "/" is sensitive.
 
