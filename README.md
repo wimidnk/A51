@@ -22,13 +22,15 @@ https://www.cellmapper.net/arfcn?net=GSM&ARFCN=21&MCC=0
 
   ________________________________________________________________
 ```
-`GSM-900:
-        chan:   14 (937.8MHz + 497Hz)   power: 3209753.01
+GSM-900:
+        chan:   13 (937.6MHz + 25.819kHz)       power: 1372087.69
+        chan:   14 (937.8MHz + 497Hz)   power: 3209753.01         ////Teletalk 2G 937.387 Downlink LAPDm
         chan:   15 (938.0MHz - 15.251kHz)       power: 3562031.89
         chan:   17 (938.4MHz + 33.406kHz)       power: 3631207.61
         chan:   18 (938.6MHz + 34.154kHz)       power: 3800253.43
         chan:   19 (938.8MHz + 15.328kHz)       power: 3812325.19
         chan:   20 (939.0MHz - 26.275kHz)       power: 4266365.83      //Teletalk 2G 939.2
+        chan:   21 (939.2MHz - 36.334kHz)       power: 2007494.51
         chan:   24 (939.8MHz + 23.846kHz)       power: 5056018.06
         chan:   25 (940.0MHz + 5.517kHz)        power: 4851968.94
         chan:   26 (940.2MHz + 10.914kHz)       power: 4230893.41
@@ -58,6 +60,146 @@ https://www.cellmapper.net/arfcn?net=GSM&ARFCN=21&MCC=0
         chan:  111 (957.2MHz + 3.338kHz)        power: 3406185.15
         chan:  112 (957.4MHz + 1.996kHz)        power: 3105951.65
         chan:  113 (957.6MHz - 34.137kHz)       power: 3212087.06
+
+TMSI/P-TMSI/M-TMSI/5G-TMSI: 2247214079 (0x85f1c3ff)
+
+LAPDm Details:
+
+Frame 731: 81 bytes on wire (648 bits), 81 bytes captured (648 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+User Datagram Protocol, Src Port: 60138, Dst Port: 4729
+GSM TAP Header, ARFCN: 978 (Downlink), TS: 1, Channel: SDCCH/8 (1)
+    Version: 2
+    Header Length: 16 bytes
+    Payload Type: GSM Um (MS<->BTS) (1)
+    Time Slot: 1
+    ..00 0011 1101 0010 = ARFCN: 978
+    .0.. .... .... .... = Uplink: 0
+    0... .... .... .... = PCS band indicator: 0
+    Signal Level: -37 dBm
+    Signal/Noise Ratio: 0 dB
+    GSM Frame Number: 625315
+    Channel Type: SDCCH/8 (8)
+    Antenna Number: 76
+    Sub-Slot: 1
+Link Access Procedure, Channel Dm (LAPDm)
+    Address Field: 0x03
+        .00. .... = LPD: Normal GSM (0)
+        ...0 00.. = SAPI: RR/MM/CC (0)
+        .... ..1. = C/R: 1
+        .... ...1 = EA: Final octet (1)
+    Control field: I, N(R)=4, N(S)=2 (0x84)
+        100. .... = N(R): 4
+        .... 010. = N(S): 2
+        .... ...0 = Frame type: Information frame (0x0)
+    Length Field: 0x0d
+        0000 11.. = Length: 3
+        .... ..0. = M: Last segment (0)
+        .... ...1 = EL: Final octet (1)
+GSM A-I/F DTAP - Ciphering Mode Command
+    Protocol Discriminator: Radio Resources Management messages (6)
+        .... 0110 = Protocol discriminator: Radio Resources Management messages (0x6)
+        0000 .... = Skip Indicator: No indication of selected PLMN (0)
+    DTAP Radio Resources Management Message Type: Ciphering Mode Command (0x35)
+    Cipher Mode Setting
+        .... ...0 = SC: No ciphering (0)
+    Cipher Mode Response
+        ...0 .... = CR: IMEISV shall not be included (0)
+
+
+
+SACCH/8 (6)
+
+
+SACCH8
+
+Timeslot 1
+
+
+
+E-GSM-900:
+        chan:    9 (936.8MHz + 15.744kHz)       power: 7112232.39
+        chan:   10 (937.0MHz - 9.372kHz)        power: 5891045.93
+        chan:   11 (937.2MHz - 34.168kHz)       power: 6141623.56
+        chan:   17 (938.4MHz + 33.021kHz)       power: 9174833.73
+        chan:   18 (938.6MHz + 15.759kHz)       power: 9243625.62
+        chan:   19 (938.8MHz + 12.173kHz)       power: 9300589.70
+        chan:   20 (939.0MHz - 13.172kHz)       power: 9364508.73
+        chan:   24 (939.8MHz + 9.350kHz)        power: 9290839.17
+        chan:   45 (944.0MHz + 36.091kHz)       power: 6714960.99
+        chan:   46 (944.2MHz + 36.446kHz)       power: 7012730.94
+        chan:   47 (944.4MHz - 13.149kHz)       power: 6634454.42
+        chan:   48 (944.6MHz - 38.024kHz)       power: 7298061.25
+        chan:   51 (945.2MHz - 20.187kHz)       power: 8382740.27
+        chan:   52 (945.4MHz - 37.097kHz)       power: 8101859.50
+        chan:   62 (947.4MHz - 25.813kHz)       power: 7434470.83
+        chan:   65 (948.0MHz + 20.314kHz)       power: 6672796.39
+        chan:   66 (948.2MHz + 6.585kHz)        power: 6799140.15
+        chan:   68 (948.6MHz + 4.452kHz)        power: 7185665.73
+        chan:   69 (948.8MHz - 24.535kHz)       power: 7113459.46
+        chan:   70 (949.0MHz - 29.037kHz)       power: 7655585.53
+        chan:   81 (951.2MHz + 28.313kHz)       power: 9828488.70
+        chan:   82 (951.4MHz + 37.526kHz)       power: 10217346.08
+        chan:   83 (951.6MHz - 9.380kHz)        power: 10256188.96
+        chan:   84 (951.8MHz - 38.478kHz)       power: 9902709.26
+        chan:   87 (952.4MHz + 35.962kHz)       power: 10081851.98
+        chan:   88 (952.6MHz + 14.146kHz)       power: 10125212.05
+        chan:   89 (952.8MHz - 14.709kHz)       power: 10041889.69
+        chan:   90 (953.0MHz - 39.672kHz)       power: 10083588.95
+        chan:   91 (953.2MHz + 5.402kHz)        power: 10194897.92
+        chan:   92 (953.4MHz - 14.659kHz)       power: 9914506.72
+        chan:   99 (954.8MHz + 37.186kHz)       power: 8772467.33
+        chan:  100 (955.0MHz + 10.976kHz)       power: 8678846.86
+        chan:  101 (955.2MHz - 18.268kHz)       power: 8792641.21
+        chan:  102 (955.4MHz - 39.916kHz)       power: 8877076.05
+        chan:  103 (955.6MHz - 34.206kHz)       power: 8796840.40
+        chan:  111 (957.2MHz + 8.931kHz)        power: 7720429.64
+        chan:  112 (957.4MHz - 13.870kHz)       power: 7493585.48
+        chan:  113 (957.6MHz - 37.830kHz)       power: 6893279.42
+        chan:  118 (958.6MHz - 39.955kHz)       power: 4870968.13
+        chan:  120 (959.0MHz + 36.305kHz)       power: 5342634.95
+        chan:  121 (959.2MHz - 17.459kHz)       power: 6082202.93
+        chan:  122 (959.4MHz - 16.155kHz)       power: 5047153.51
+        chan: 1019 (934.0MHz + 24.964kHz)       power: 8936415.11
+        chan: 1020 (934.2MHz + 29.328kHz)       power: 9357524.78                                                                                                                            
+        chan: 1021 (934.4MHz + 13.184kHz)       power: 9350206.00                                                                                                                            
+        chan: 1022 (934.6MHz - 26.054kHz)       power: 9081121.24 
+        
+        
+
+
+kal: Scanning for GSM-900 base stations.
+GSM-900:
+        chan:   18 (938.6MHz - 1.083kHz)        power: 9827249.70
+        chan:   19 (938.8MHz - 13.767kHz)       power: 9840901.57
+        chan:   20 (939.0MHz - 38.997kHz)       power: 9872681.91
+        chan:   45 (944.0MHz + 30.858kHz)       power: 9724778.08
+        chan:   46 (944.2MHz - 1.170kHz)        power: 9750471.04
+        chan:   47 (944.4MHz + 6.196kHz)        power: 9908071.94
+        chan:   48 (944.6MHz - 9.231kHz)        power: 9899701.43
+        chan:   60 (947.0MHz - 1.087kHz)        power: 9586970.55
+        chan:   67 (948.4MHz + 23.148kHz)       power: 9374021.42
+        chan:   69 (948.8MHz + 348Hz)   power: 9525426.45
+        chan:   70 (949.0MHz + 18.471kHz)       power: 9999256.60
+        chan:   71 (949.2MHz - 13.812kHz)       power: 9599407.10
+        chan:   73 (949.6MHz - 28.953kHz)       power: 9998518.84
+        chan:   79 (950.8MHz + 29.183kHz)       power: 10160130.05
+        chan:   81 (951.2MHz - 20.969kHz)       power: 10173427.26
+        chan:   82 (951.4MHz + 3.083kHz)        power: 10132600.01
+        chan:   83 (951.6MHz - 11.569kHz)       power: 10237936.25
+        chan:   84 (951.8MHz - 38.421kHz)       power: 10173225.10
+        chan:   88 (952.6MHz + 11.601kHz)       power: 10123003.03
+        chan:   89 (952.8MHz - 21.129kHz)       power: 9869310.98
+        chan:   91 (953.2MHz + 4.536kHz)        power: 9833021.40
+        chan:   92 (953.4MHz + 32.193kHz)       power: 9981458.47
+        chan:   99 (954.8MHz + 32.815kHz)       power: 8569750.08
+        chan:  100 (955.0MHz + 11.105kHz)       power: 8651618.95
+        chan:  101 (955.2MHz - 20.683kHz)       power: 8768157.24
+        chan:  102 (955.4MHz - 38.829kHz)       power: 8801026.98
+        chan:  103 (955.6MHz - 38.902kHz)       power: 8847834.85
+
+
 ```  
 ________________________________________________________________
 
@@ -69,19 +211,29 @@ and select loopback
 grgsm_livemon
 
 
-Capturing SMS
+##Capturing SMS
 KC
 
 TMSI
 
 ARFCN
-21
+14
 
-Downlink
-939.2
+Downlink Frequency
+937.387
+৯৩৭৩৮৭০০০
+grgsm_capture -g 40 -a 14 -s 1000000 sms.cfile -T 20
+grgsm_decode -a 14 -s 1000000 -c ./sms.cfile -m BCCH -t 0
 
+grgsm_capture -g 40 -a 14 -s 1000000 2sms.cfile -T 20
+grgsm_decode -a 14 -s 1000000 -c ./2sms.cfile -m BCCH -t 0
+
+grgsm_capture -g 40 -f 937387000 -s 1000000 5sms.cfile -T 40
+
+grgsm_decode -f 937387000 -s 1000000 -c ./5sms.cfile -m BCCH -t 0
 ```
 We need LAPDm (not gsmtap from wireshark)
+
 
 
 https://github.com/ud2/advisories/blob/master/android/samsung/nocve-2016-0004/usbswitcher.c
