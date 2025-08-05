@@ -13,6 +13,10 @@ sudo make install
 5. on the kalibrate Hackrf Folder Go to and run
 ```
 ./src/kal -s 900
+
+
+https://www.cellmapper.net/arfcn?net=GSM&ARFCN=21&MCC=0
+
 ```
 7. You will get result like this
 
@@ -24,7 +28,7 @@ sudo make install
         chan:   17 (938.4MHz + 33.406kHz)       power: 3631207.61
         chan:   18 (938.6MHz + 34.154kHz)       power: 3800253.43
         chan:   19 (938.8MHz + 15.328kHz)       power: 3812325.19
-        chan:   20 (939.0MHz - 26.275kHz)       power: 4266365.83
+        chan:   20 (939.0MHz - 26.275kHz)       power: 4266365.83      //Teletalk 2G 939.2
         chan:   24 (939.8MHz + 23.846kHz)       power: 5056018.06
         chan:   25 (940.0MHz + 5.517kHz)        power: 4851968.94
         chan:   26 (940.2MHz + 10.914kHz)       power: 4230893.41
@@ -57,6 +61,27 @@ sudo make install
 ```  
 ________________________________________________________________
 
+
+To use GR GSM
+Open sudo wireshark
+and select loopback
+``` 
+grgsm_livemon
+
+
+Capturing SMS
+KC
+
+TMSI
+
+ARFCN
+21
+
+Downlink
+939.2
+
+```
+We need LAPDm (not gsmtap from wireshark)
 
 
 https://github.com/ud2/advisories/blob/master/android/samsung/nocve-2016-0004/usbswitcher.c
