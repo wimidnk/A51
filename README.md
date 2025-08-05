@@ -4,16 +4,17 @@
 3. Get Dragon OS, Do not upgrade.
 
 4. Get Kalibrate-Hackrf from
-
+```
 git clone https://github.com/scateu/kalibrate-hackrf
 cd kalibrate-hackrf/
 ./bootstrap && CXXFLAGS='-W -Wall -O3' ./configure && make
 sudo make install
-
+```
 5. on the kalibrate Hackrf Folder Go to and run
+```
 ./src/kal -s 900
-
-6. You will get result like this
+```
+7. You will get result like this
 
   ________________________________________________________________
 ```
@@ -61,22 +62,25 @@ ________________________________________________________________
 https://github.com/ud2/advisories/blob/master/android/samsung/nocve-2016-0004/usbswitcher.c
 
 7. To install Usbswitcher you need to install
-sudo apt get install libusb-dev    (libusb 0.1)
+```
+sudo apt get install libusb-dev ```   (libusb 0.1)
 https://github.com/ud2/advisories/tree/master/android/samsung/nocve-2016-0004
 https://github.com/libusb/libusb
-
+```
 gcc -o usbswitcher usbswitcher.c -lusb
 sudo ./usbswitcher -s
-
+```
 
 Usb switcher can change certain MTP mobiles to 2nd configuration where you can use AT commands to read the SIMs (Kc & TMSI).
-
+on Mobile phone
+```
 cat /proc/tty/drivers
-
+```
 will show Serial/USB drivers
-
+On PC
+```
 lsusb -v|less
-
+```
 This command will show something like this.
 bNumConfigurations 2 will be required to switch to usb switcher to swtich to 2nd configuration.
 
@@ -314,15 +318,19 @@ Device Status:     0x0000
   
   
 8. To install Kraken
+```
 
 git clone https://github.com/joswr1ght/kraken
 
 cd kraken/
+```
 
 Change all CPP files to compile this
+```
 
-It should be sufficient to replace the <stropts.h> inclusion with <sys/ioctl.h>
-
+It should be sufficient to replace the <stropts.h> inclusion with <sys/ioctl.h>```
+cd to /kraken/
+```
 sudo make noati
 
 cd a5_cpu/
@@ -332,30 +340,33 @@ cd a5_cpu/
 cd ..
 
 cd indexes/
-
+```
 change sample index to index.conf
   ________________________________________________________________
+  ```
 #Devices:  dev/node max_tables
 Device: /dev/sdc2 40
 
 #Tables: dev id(advance) offset
-  
+  ```
   ________________________________________________________________
  /dev/sdc2 is 2TB and formatted to ext4.
  it will be raw file system after indexed.
 
-
+```
 cp tables.conf.sample tables.conf
-
-sudo python2 ./Behemoth.py /media/nm/backup01/A51/table
+```
+sudo python2 ./Behemoth.py /media/nm/backup01/A51/table```
 
 "/" is sensitive.
 
 it will take 2/3 hour to copy all 1.6TB to that drive
-
+```
 cat tables.conf
-
+```
 
 To Run Kraken
-cd Kraken/
+```
+cd kraken/Kraken/
 sudo ./kraken  ../indexes/
+```
