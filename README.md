@@ -16,8 +16,8 @@ sudo make install
 6. You will get result like this
 
   ________________________________________________________________
-
-GSM-900:
+```
+`GSM-900:
         chan:   14 (937.8MHz + 497Hz)   power: 3209753.01
         chan:   15 (938.0MHz - 15.251kHz)       power: 3562031.89
         chan:   17 (938.4MHz + 33.406kHz)       power: 3631207.61
@@ -53,7 +53,7 @@ GSM-900:
         chan:  111 (957.2MHz + 3.338kHz)        power: 3406185.15
         chan:  112 (957.4MHz + 1.996kHz)        power: 3105951.65
         chan:  113 (957.6MHz - 34.137kHz)       power: 3212087.06
-        
+```  
 ________________________________________________________________
 
 
@@ -81,6 +81,7 @@ This command will show something like this.
 bNumConfigurations 2 will be required to switch to usb switcher to swtich to 2nd configuration.
 
 ________________________________________________________________
+```
 Bus 001 Device 005: ID 04e8:6860 Samsung Electronics Co., Ltd Galaxy A5 (MTP)
 Device Descriptor:
   bLength                18
@@ -305,6 +306,8 @@ Binary Object Store Descriptor:
     bU2DevExitLat         500 micro seconds
 Device Status:     0x0000
   (Bus Powered)
+
+```
   
   ________________________________________________________________
   
