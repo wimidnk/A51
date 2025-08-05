@@ -23,6 +23,27 @@ https://www.cellmapper.net/arfcn?net=GSM&ARFCN=21&MCC=0
   ________________________________________________________________
 ```
 GSM-900:
+Teletalk ARFCN: List of ARFCNs = 24 21 16 15 14 10 7 3 2 1
+
+1
+2
+3
+7
+10
+14  chan:   14 (937.8MHz + 497Hz)   power: 3209753.01
+15
+16
+21
+24  chan:   24 (939.8MHz + 23.846kHz)       power: 5056018.06
+
+938.8
+
+
+Grameenphone 
+chan:  101 (955.2MHz + 5.860kHz)        power: 5112706.06
+
+
+
         chan:   13 (937.6MHz + 25.819kHz)       power: 1372087.69
         chan:   14 (937.8MHz + 497Hz)   power: 3209753.01         ////Teletalk 2G 937.387 Downlink LAPDm
         chan:   15 (938.0MHz - 15.251kHz)       power: 3562031.89
@@ -254,6 +275,136 @@ GSM CCCH - Paging Request Type 2
 ```  
 ________________________________________________________________
 
+```
+Airtel 
+Freqency:
+৯৫২০০০০০০
+Channel:
+85
+
+SACCH8
+
+Timeslot 1
+
+TMSI
+1107975539
+
+
+chan:   85 (952.0MHz - 13.828kHz)       power: 5994576.16
+
+grgsm_capture -g 14 -a 85 -s 1000000 airtel.cfile -T 60
+grgsm_decode -a 85 -s 1000000 -c ./airtel.cfile -m SACCH -t 1
+
+grgsm_decode -f 937387000 -s 1000000 -c ./sms.cfile -m BCCH -t 0
+
+//// grgsm_decode -a 94 -s 1e6 -c airtel.cfile -m SDCCH -t1
+works LAPDM Data
+grgsm_decode -a 85 -s 1e6 -c ./airtel.cfile -m SDCCH8 -t 1
+works GSMTap Immidiate Assingment Data
+grgsm_decode -a 85 -s 1e6 -c ./airtel.cfile -m BCCH -t 0
+________
+Teletalk
+________
+
+List of ARFCNs = 24 21 16 15 14 10 7 3 2 1
+
+grgsm_decode -a 14 -s 1e6 -c ./sms.cfile -m BCCH -t 0
+
+
+grgsm_capture -f 937800000 -g 14 -s 1000000 teletalk.cfile -T 60
+grgsm_decode -f 937800000 -s 1e6 -c ./teletalk.cfile -m BCCH -t 0
+
+grgsm_decode -f 937800000 -s 1e6 -c ./teletalk.cfile -m SDCCH8 -t 0
+
+.... 0... = A5/1 algorithm supported: encryption algorithm A5/1 available
+chan:   21 (939.2MHz - 36.334kHz)       power: 2007494.51
+
+Frequency
+৯৩৭৪০০০০০
+grgsm_capture -f 937400000 -g 14 -s 1000000 teletalk.cfile -T 60
+grgsm_decode -f 937400000 -s 1000000 -c ./teletalk.cfile -m BCCH -t 0
+
+grgsm_decode -a 10 -s 1000000 -c ./test.cfile -m BCCH -t 0
+
+```
+
+LAPDm Data Airtel
+```
+Frame 197: 81 bytes on wire (648 bits), 81 bytes captured (648 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+User Datagram Protocol, Src Port: 34265, Dst Port: 4729
+    Source Port: 34265
+    Destination Port: 4729
+    Length: 47
+    Checksum: 0xfe42 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 0]
+    [Timestamps]
+        [Time since first frame: 2.645449595 seconds]
+        [Time since previous frame: 0.004506436 seconds]
+    UDP payload (39 bytes)
+GSM TAP Header, ARFCN: 0 (Downlink), TS: 1, Channel: SDCCH/8 (3)
+    Version: 2
+    Header Length: 16 bytes
+    Payload Type: GSM Um (MS<->BTS) (1)
+    Time Slot: 1
+    ..00 0000 0000 0000 = ARFCN: 0
+    .0.. .... .... .... = Uplink: 0
+    0... .... .... .... = PCS band indicator: 0
+    Signal Level: -20 dBm
+    Signal/Noise Ratio: 0 dB
+    GSM Frame Number: 844011
+    Channel Type: SDCCH/8 (8)
+    Antenna Number: 87
+    Sub-Slot: 3
+Link Access Procedure, Channel Dm (LAPDm)
+    Address Field: 0x01
+        .00. .... = LPD: Normal GSM (0)
+        ...0 00.. = SAPI: RR/MM/CC (0)
+        .... ..0. = C/R: 0
+        .... ...1 = EA: Final octet (1)
+    Control field: U F, func=UA (0x73)
+        ...1 .... = Final: True
+        011. 00.. = Response: Unnumbered Acknowledge (0x18)
+        .... ..11 = Frame type: Unnumbered frame (0x3)
+    Length Field: 0x4d
+        0100 11.. = Length: 19
+        .... ..0. = M: Last segment (0)
+        .... ...1 = EL: Final octet (1)
+GSM A-I/F DTAP - Location Updating Request
+    Protocol Discriminator: Mobility Management messages (5)
+        .... 0101 = Protocol discriminator: Mobility Management messages (0x5)
+        0000 .... = Skip Indicator: No indication of selected PLMN (0)
+    00.. .... = Sequence number: 0
+    ..00 1000 = DTAP Mobility Management Message Type: Location Updating Request (0x08)
+    Ciphering Key Sequence Number
+    Location Updating Type - Normal
+    Location Area Identification (LAI)
+        Location Area Identification (LAI) - 470/02/65534
+            Mobile Country Code (MCC): Bangladesh (470)
+            Mobile Network Code (MNC): Aktel (02)
+            Location Area Code (LAC): 0xfffe (65534)
+    Mobile Station Classmark 1
+        Mobile Station Classmark 1
+            0... .... = Spare: 0
+            .10. .... = Revision Level: Used by mobile stations supporting R99 or later versions of the protocol (2)
+            ...1 .... = ES IND: Controlled Early Classmark Sending option is implemented in the MS
+            .... 0... = A5/1 algorithm supported: encryption algorithm A5/1 available
+            .... .011 = RF Power Capability: class 4 (3)
+    Mobile Identity - IMSI (470022312818533)
+        Length: 8
+        0100 .... = Identity Digit 1: 4
+        .... 1... = Odd/even indication: Odd number of identity digits
+        .... .001 = Mobile Identity Type: IMSI (1)
+        IMSI: 470022312818533
+        [Association IMSI: 470022312818533]
+    MS network feature support
+```
+
+
+    
+
 
 To use GR GSM
 Open sudo wireshark
@@ -282,6 +433,9 @@ grgsm_decode -a 14 -s 1000000 -c ./2sms.cfile -m BCCH -t 0
 grgsm_capture -g 40 -f 937387000 -s 1000000 5sms.cfile -T 40
 
 grgsm_decode -f 937387000 -s 1000000 -c ./5sms.cfile -m BCCH -t 0
+
+
+grgsm_decode -f 937387000 -s 1000000 -c ./sms.cfile -m BCCH -t 0
 ```
 We need LAPDm (not gsmtap from wireshark)
 
