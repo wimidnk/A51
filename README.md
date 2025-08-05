@@ -200,6 +200,57 @@ GSM-900:
         chan:  103 (955.6MHz - 38.902kHz)       power: 8847834.85
 
 
+TMSI Searched Details
+
+Frame 6: 81 bytes on wire (648 bits), 81 bytes captured (648 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+User Datagram Protocol, Src Port: 47655, Dst Port: 4729
+    Source Port: 47655
+    Destination Port: 4729
+    Length: 47
+    Checksum: 0xfe42 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 0]
+    [Timestamps]
+        [Time since first frame: 0.129955207 seconds]
+        [Time since previous frame: 0.063032055 seconds]
+    UDP payload (39 bytes)
+GSM TAP Header, ARFCN: 978 (Downlink), TS: 0, Channel: CCCH (4)
+    Version: 2
+    Header Length: 16 bytes
+    Payload Type: GSM Um (MS<->BTS) (1)
+    Time Slot: 0
+    ..00 0011 1101 0010 = ARFCN: 978
+    .0.. .... .... .... = Uplink: 0
+    0... .... .... .... = PCS band indicator: 0
+    Signal Level: -30 dBm
+    Signal/Noise Ratio: 0 dB
+    GSM Frame Number: 1989536
+    Channel Type: CCCH (2)
+    Antenna Number: 215
+    Sub-Slot: 4
+GSM CCCH - Paging Request Type 2
+    L2 Pseudo Length
+        0010 11.. = L2 Pseudo Length value: 11
+    .... 0110 = Protocol discriminator: Radio Resources Management messages (0x6)
+        .... 0110 = Protocol discriminator: Radio Resources Management messages (0x6)
+        0000 .... = Skip Indicator: No indication of selected PLMN (0)
+    Message Type: Paging Request Type 2
+    Page Mode
+        .... 0000 = Page Mode: Normal paging (0)
+    Channel Needed
+        ..11 .... = Channel 1: TCH/H or TCH/F (Dual rate) (3)
+        00.. .... = Channel 2: Any channel (0)
+    TMSI/P-TMSI - Mobile Identity 1
+        TMSI/P-TMSI
+            TMSI/P-TMSI: 2666652431 (0x9ef1e30f)
+    TMSI/P-TMSI - Mobile Identity 2
+        TMSI/P-TMSI
+            TMSI/P-TMSI: 3496446147 (0xd06788c3)
+    P2 Rest Octets
+
+
 ```  
 ________________________________________________________________
 
