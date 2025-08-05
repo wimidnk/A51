@@ -599,3 +599,14 @@ To Run Kraken
 cd kraken/Kraken/
 sudo ./kraken  ../indexes/
 ```
+
+
+To install airprobe 
+```
+sudo apt install python2-dev
+https://github.com/iamckn/airprobe
+
+gsm receiver
+make -p "CC = gcc-9"
+
+```
